@@ -1,3 +1,5 @@
+require "pry"
+
 def consolidate_cart(cart)
   new_cart = {}
   cart.each do |hash|
@@ -18,7 +20,8 @@ def apply_coupons(cart, coupons)
     item_name = coupon_hash[:item]
     new_item = "#{item_name} W/COUPON"
         
-    if cart.has_key?(item_name) && cart[item_name][:count] >= coupon_hash[:num] 
+    if cart.has_key?(item_name) && cart[item_name][:count] >= coupon_hash[:num]
+      binding.pry
       cart[new_item] = {
         :price => (coupon_hash[:cost] / coupon_hash[:num]),
         :clearance => cart[item_name][:clearance],
