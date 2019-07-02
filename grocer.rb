@@ -33,6 +33,7 @@ def apply_coupons(cart, coupons)
       }
       cart[item_name][:count] -= coupon_hash[:num] 
     end 
+    end 
   end 
   cart
 end
