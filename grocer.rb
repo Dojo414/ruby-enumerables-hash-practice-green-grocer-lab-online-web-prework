@@ -12,7 +12,7 @@ def consolidate_cart(cart)
       end
     end
   end 
-  new_cart = cart
+  new_cart
 end
 
 def apply_coupons(cart, coupons)
